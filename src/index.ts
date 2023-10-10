@@ -17,7 +17,7 @@ async function init() {
 
     const app = express() 
     app.use(cors({
-        origin: process.env.FRONTEND_URL
+        origin: "*"
     }))
     app.use(express.json({ limit: '500mb' }))
     
