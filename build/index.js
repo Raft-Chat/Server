@@ -28,7 +28,9 @@ function init() {
         // Connect To DB
         (0, config_1.connectDB)();
         const app = (0, express_1.default)();
-        app.use((0, cors_1.default)());
+        app.use((0, cors_1.default)({
+            origin: `${process.env.FRONTEND_URL}`
+        }));
         app.use(express_1.default.json({ limit: '500mb' }));
         const PORT = Number(process.env.PORT) || 8000;
         // Create Graphql Server
