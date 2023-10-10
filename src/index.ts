@@ -15,12 +15,12 @@ async function init() {
     // Connect To DB
     connectDB()
 
-    const app = express() 
+    const app = express()
     app.use(cors({
-        origin: "*"
+        origin: `${process.env.FRONTEND_URL}`
     }))
     app.use(express.json({ limit: '500mb' }))
-    
+
     const PORT = Number(process.env.PORT) || 8000
 
     // Create Graphql Server
