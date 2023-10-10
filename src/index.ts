@@ -16,7 +16,9 @@ async function init() {
     connectDB()
 
     const app = express() 
-    app.use(cors())
+    app.use(cors({
+        origin: process.env.FRONTEND_URL
+    }))
     app.use(express.json({ limit: '500mb' }))
     
     const PORT = Number(process.env.PORT) || 8000
