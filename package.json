@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sudo tsc --outDir ./build",
+    "build": "tsc --outDir ./build",
     "start": "node build/index.js",
     "dev": "tsc-watch --onSuccess \"npm start\""
   },
