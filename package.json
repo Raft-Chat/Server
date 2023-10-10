@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc -p ./src",
+    "build": "npm install typescript &&  tsc -p ./src",
     "start": "node build/index.js",
     "dev": "tsc-watch --onSuccess \"npm start\""
   },
